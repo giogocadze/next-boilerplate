@@ -4,7 +4,8 @@ import './globals.css';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Container from '@/components/Containert';
+import Container from '@/components/Container';
+import Providers from './providers';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,11 +24,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        <Container>{children}</Container>
-        <Footer />
+        <Providers>
+          <Header />
+          <Container>{children}</Container>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
