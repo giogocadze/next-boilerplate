@@ -13,7 +13,7 @@ Minimal Next.js boilerplate with a clean setup.
 npm install
 npm run dev
 ```
-Scripts
+## Scripts
 ```
 npm run dev
 npm run build
